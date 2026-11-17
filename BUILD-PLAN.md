@@ -31,6 +31,9 @@ Sesuai RULES.txt ("Before you submit" + "Getting started"): **publish dulu, buil
 5. Ambil play code: `node <kit>/cli/makefun.mjs check --repo <repo> --play-code <n>` (n dari langkah
    registrasi "Enter"), tulis play code APA ADANYA di deskripsi experience
    (Game Settings → Basic Info, atau Creator Dashboard → Configure). Jangan ubah isinya.
+   Play code yang tercetak saat check 17 Nov 2026: **`makefun-harp-pheasant-fox`** (code 0 dari 4);
+   bila Roblox menolak deskripsi dengan code ini, jalankan check dengan `--play-code 1` (s.d. 3)
+   untuk code lain.
 6. Isi `PLAY.json` di repo (di dalam rekaman, oleh agen): `{"url": "https://www.roblox.com/games/<placeId>",
    "place_id": <placeId>, "universe_id": <universeId>}` — place_id = angka di play link,
    universe_id = angka setelah `experiences/` di Creator Dashboard, atau `game.GameId` di Studio.

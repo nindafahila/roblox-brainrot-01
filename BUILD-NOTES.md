@@ -41,10 +41,16 @@ Game **Brainrot Base** (3D, Rojo-first, semua karakter/nama orisinal):
   yang WAJAR tanpa definisi tipe Roblox; **nol SyntaxError / nol error lain**.
 - **main.ts determinisme:** `MAKEFUN_OUTPUT_DIR=out node main.ts` 2x → `diff -r` identik;
   sha256 game.rbxl `21eda0c0…44099`, dossier.json `a72c2511…d98` (sama di kedua run).
-- **Kit check** (`node cli/makefun.mjs check --kit . --repo …`, dari kit dir):
-  `kit roblox-brainrot-01 dev: verified 21 files`, lalu menolak karena repo belum git
-  saat itu (`is not in a git repository`). **Check BELUM diulang setelah push** — harus
-  diulang di sesi terekam (baris play_link + transcripts wajar gagal sampai publish + rekaman ada).
+- **Kit check** (`node cli/makefun.mjs check --kit . --repo .`, dari dalam repo,
+  commit `f77d642`, 17 Nov 2026 ~16:10 WIB): **4 passed, 1 failed, 16 skipped, 5 checked at submission.**
+  Pass: competition_open (dibuka 17 Nov 14:30 UTC, deadline 20 Nov 14:30 UTC), snapshot
+  (18 file, 284.980 byte), license_osi (MIT), entrypoint (main.ts → node22).
+  FAIL (wajar): **play_link** — PLAY.json masih starter 0/0/0, belum publish.
+  Skip: prerequisites + semua baris transcripts (butuh sealed recordings — tidak ada di sini).
+  "At submission": repo_public, repo_owner, repo_created_after_open, commit_in_repo,
+  duplicate_snapshot — diverifikasi server saat submit (repo sudah publik, owner.json ada,
+  dibuat setelah opening, commit sudah push).
+  Play code tercetak: **`makefun-harp-pheasant-fox`** (code 0 dari 4).
 
 ## Yang MASIH starter / belum nyata (jangan disalahartikan)
 
